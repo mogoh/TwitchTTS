@@ -11,3 +11,5 @@ accents = [
     {'language': 'fr', 'accent': 'ca'},
     {'language': 'es', 'accent': 'es'},
 ]
+minimum_pitch = 0.9
+maximum_pitch = 1.1

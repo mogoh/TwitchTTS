@@ -50,4 +50,4 @@ def generate_sound(message: Message) -> AudioSegment:
     audio = AudioSegment.from_mp3("temp.mp3")
     os.remove('temp.mp3')
     # change speed and return
-    return(speed_change(audio, 0.9 + data.get('pitch') * 0.3))
+    return(speed_change(audio, data.get('pitch')))

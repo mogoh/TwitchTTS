@@ -7,6 +7,7 @@ from twitch.chat import Message
 
 from log import get_logger
 from config import accents
+import config
 
 
 l = get_logger(__name__)
@@ -46,8 +47,8 @@ def lookup(message: Message):
     # at this point, no existing data
     # generate new pitch value
     l.debug('[new viewer] {} - setting data'.format(message.sender))
-    random_value = random.random()
-    random_value = (int(random_value * 100)) / 100
+    random_value = random.uniform(config.minimum_pitch, config.maximum_pitch)
+    # random_value = (int(random_value * 100)) / 100
     new_data = random.choice(accents)
     new_data['pitch'] = random_value
     write_to_file(message.sender, new_data)
