@@ -1,7 +1,9 @@
-venv/
 temp.mp3
 config.py
 lookup/people.json
+filter/words.json
 *.pyc
+
+venv/
 .DS_STORE
 .vscode/
